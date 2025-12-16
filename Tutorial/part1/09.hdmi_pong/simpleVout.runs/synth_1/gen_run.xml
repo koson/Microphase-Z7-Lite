@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1613721248">
-  <File Type="VDS-TIMING-PB" Name="system_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="system_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="system.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="system_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="system_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="system_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="system.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1765918072">
   <File Type="REPORTS-TCL" Name="system_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="system_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="system_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="system.tcl"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+  <File Type="RDS-RDS" Name="system.vds"/>
+  <File Type="RDS-DCP" Name="system.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/svo_defines.vh">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/rgb2dvi.v">
@@ -88,7 +86,7 @@
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/system.xdc">
       <FileInfo>
@@ -100,7 +98,7 @@
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
-  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
