@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Wed Dec 17 03:19:01 2025
-# Process ID         : 24916
+# Start of session at: Wed Dec 17 03:21:39 2025
+# Process ID         : 26616
 # Current directory  : D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.runs/synth_1
 # Command line       : vivado.exe -log display_demo_dvi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source display_demo_dvi.tcl
 # Log file           : D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.runs/synth_1/display_demo_dvi.vds
@@ -19,6 +19,6 @@
 # Host memory        : 68498 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 72793 MB
-# Available Virtual  : 21760 MB
+# Available Virtual  : 21543 MB
 #-----------------------------------------------------------
 source display_demo_dvi.tcl -notrace

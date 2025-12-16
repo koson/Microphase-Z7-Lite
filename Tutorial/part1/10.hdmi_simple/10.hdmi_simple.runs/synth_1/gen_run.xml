@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1765916339">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1765916497">
   <File Type="PA-TCL" Name="display_demo_dvi.tcl"/>
   <File Type="REPORTS-TCL" Name="display_demo_dvi_reports.tcl"/>
   <File Type="RDS-RDS" Name="display_demo_dvi.vds"/>
@@ -11,14 +11,6 @@
   <File Type="VDS-TIMING-PB" Name="display_demo_dvi_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/video_defines.vh">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-        <Attr Name="IsVisible" Val="1"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/async_reset.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -66,6 +58,13 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/video_defines.vh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/display_demo_dvi.v">

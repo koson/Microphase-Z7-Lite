@@ -78,6 +78,7 @@ set_property ip_output_repo d:/GitHubRepos/__AES/__Electronics_Project/Component
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_verilog D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/video_defines.vh
 read_verilog -library xil_defaultlib {
   D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/async_reset.v
   D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/display_clock.v
