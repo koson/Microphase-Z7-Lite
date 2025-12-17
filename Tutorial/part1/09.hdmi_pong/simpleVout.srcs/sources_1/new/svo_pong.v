@@ -20,6 +20,14 @@
 `timescale 1ns / 1ps
 `include "svo_defines.vh"
 
+// Local color component macros if not defined globally
+`ifndef svo_rgba
+`define svo_r(pixel) (((pixel) >> 0) & 8'hFF)
+`define svo_g(pixel) (((pixel) >> 8) & 8'hFF)
+`define svo_b(pixel) (((pixel) >> 16) & 8'hFF)
+`define svo_a(pixel) (((pixel) >> 24) & 8'hFF)
+`define svo_rgba(r, g, b, a) ({(a), (b), (g), (r)})
+`endif
 
 // ----------------------------------------------------------------------
 // module svo_pong
