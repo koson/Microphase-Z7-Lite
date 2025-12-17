@@ -40,13 +40,12 @@
 	.SVO_BITS_PER_BLUE(SVO_BITS_PER_BLUE), \
 	.SVO_BITS_PER_ALPHA(SVO_BITS_PER_ALPHA)
 
-// Color component extraction macros
-// Pixel format: {Blue[7:0], Green[7:0], Red[7:0]}
-// For 24-bit: BGRBGRBGR (8 bits each)
-`define svo_r(pixel) ((pixel) & ((1 << SVO_BITS_PER_RED) - 1))
-`define svo_g(pixel) (((pixel) >> SVO_BITS_PER_RED) & ((1 << SVO_BITS_PER_GREEN) - 1))
-`define svo_b(pixel) (((pixel) >> (SVO_BITS_PER_RED + SVO_BITS_PER_GREEN)) & ((1 << SVO_BITS_PER_BLUE) - 1))
-`define svo_a(pixel) (((pixel) >> (SVO_BITS_PER_RED + SVO_BITS_PER_GREEN + SVO_BITS_PER_BLUE)) & ((1 << SVO_BITS_PER_ALPHA) - 1))
+// Color component extraction macros (for standard 8-bit per channel)
+// Pixel format: {Blue[7:0], Green[7:0], Red[7:0]} for 24-bit RGB
+`define svo_r(pixel) (((pixel) >> 0) & 8'hFF)
+`define svo_g(pixel) (((pixel) >> 8) & 8'hFF)
+`define svo_b(pixel) (((pixel) >> 16) & 8'hFF)
+`define svo_a(pixel) (((pixel) >> 24) & 8'hFF)
 
 // Color component assembly macro
 // Assembles RGBA components back into a pixel (BGR order for 24-bit)
