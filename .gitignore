@@ -2,6 +2,10 @@
 # Vivado Project Files
 #########################################################
 
+# Vivado project files (not for version control)
+*.xpr
+*.xpe
+
 # Vivado generated folders (use ** for all subdirectories)
 **/.Xil/
 **/.jobs/
