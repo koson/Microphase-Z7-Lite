@@ -213,7 +213,7 @@ module svo_dim #( `SVO_DEFAULT_PARAMS ) (
 			pipe_out_tvalid <= 0;
 		end else
 		if (pipe_enable) begin
-			pipe_out_tdata <= enable ? svo_rgba(svo_r(pipe_in_tdata) >> 1, svo_g(pipe_in_tdata) >> 1, svo_b(pipe_in_tdata) >> 1, svo_a(pipe_in_tdata)) : pipe_in_tdata;
+			pipe_out_tdata <= enable ? {(pipe_in_tdata >> 24) & 8'hFF, ((pipe_in_tdata >> 16) & 8'hFF) >> 1, ((pipe_in_tdata >> 8) & 8'hFF) >> 1, ((pipe_in_tdata >> 0) & 8'hFF) >> 1} : pipe_in_tdata;
 			pipe_out_tuser <= pipe_in_tuser;
 			pipe_out_tvalid <= pipe_in_tvalid;
 		end
