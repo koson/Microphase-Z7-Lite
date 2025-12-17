@@ -28,7 +28,7 @@
 `define SINGLE_ENDED_LDI
 
 module system (
-	// 125 MHz clock
+	// 50 MHz clock (from board CLK pin N18)
 	input clk,
 
 //	output [4:0] vga_r,
@@ -115,10 +115,11 @@ module system (
 	// reset stays active until PLLs are locked
 	reg resetn;
 
-	// For   640x480 @ 60 Hz this should be  23.5 MHz
-	// For   800x480 @ 75 Hz this should be  35.7 MHz
-	// For  1024x768 @ 60 Hz this should be  56.0 MHz
-	// For 1920x1080 @ 60 Hz this should be 138.5 MHz
+	// For   640x480 @ 60 Hz this should be  25.2 MHz
+	// For   800x480 @ 75 Hz this should be  36.0 MHz
+	// For   800x600 @ 60 Hz this should be  40.0 MHz
+	// For  1024x768 @ 60 Hz this should be  65.0 MHz
+	// For 1920x1080 @ 60 Hz this should be 148.5 MHz
 	wire pixel_clk;
 
 	// TMDS bit clock is 5x pixel_clk (DDR)
@@ -140,14 +141,14 @@ module system (
 	wire pll_feedback_1;
 
 	PLLE2_BASE #(
-		.CLKFBOUT_MULT(33),
-		.CLKOUT0_DIVIDE(70),
+		.CLKFBOUT_MULT(25),
+		.CLKOUT0_DIVIDE(50),
 		.CLKOUT0_DUTY_CYCLE(0.5),
 		.CLKOUT0_PHASE(0.0),
-		.CLKOUT1_DIVIDE(14),
+		.CLKOUT1_DIVIDE(10),
 		.CLKOUT1_DUTY_CYCLE(0.5),
 		.CLKOUT1_PHASE(0.0),
-		.CLKOUT2_DIVIDE(10),
+		.CLKOUT2_DIVIDE(2),
 		.CLKOUT2_DUTY_CYCLE(0.5),
 		.CLKOUT2_PHASE(0.0)
 	) PLL_1 (
@@ -249,10 +250,10 @@ module system (
 
 	PLLE2_BASE #(
 		.CLKFBOUT_MULT(32),
-		.CLKOUT0_DIVIDE(45),
+		.CLKOUT0_DIVIDE(40),
 		.CLKOUT0_DUTY_CYCLE(0.5),
 		.CLKOUT0_PHASE(0.0),
-		.CLKOUT1_DIVIDE(9),
+		.CLKOUT1_DIVIDE(8),
 		.CLKOUT1_DUTY_CYCLE(0.5),
 		.CLKOUT1_PHASE(0.0)
 	) PLL_1 (
