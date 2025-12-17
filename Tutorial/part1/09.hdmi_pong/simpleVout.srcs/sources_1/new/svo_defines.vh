@@ -31,6 +31,15 @@
 // Set to 11 for high-res modes, 10 for standard modes
 `define SVO_XYBITS 11
 
+// Parameter passing macro - used to pass SVO parameters to sub-modules
+`define SVO_PASS_PARAMS \
+	.SVO_MODE(SVO_MODE), \
+	.SVO_BITS_PER_PIXEL(SVO_BITS_PER_PIXEL), \
+	.SVO_BITS_PER_RED(SVO_BITS_PER_RED), \
+	.SVO_BITS_PER_GREEN(SVO_BITS_PER_GREEN), \
+	.SVO_BITS_PER_BLUE(SVO_BITS_PER_BLUE), \
+	.SVO_BITS_PER_ALPHA(SVO_BITS_PER_ALPHA)
+
 // Declaration macro - defines timing parameters based on SVO_MODE
 `define SVO_DECLS \
 	localparam SVO_HOR_PIXELS = \
