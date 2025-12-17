@@ -2,9 +2,8 @@
 # Vivado Project Files
 #########################################################
 
-# Vivado project files (not for version control)
-*.xpr
-*.xpe
+# NOTE: Keep .xpr project files - they are essential source files
+# Only ignore Vivado build/cache artifacts
 
 # Vivado generated folders (use ** for all subdirectories)
 **/.Xil/
