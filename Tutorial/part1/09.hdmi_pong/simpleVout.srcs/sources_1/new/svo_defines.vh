@@ -27,6 +27,10 @@
 	parameter SVO_BITS_PER_BLUE = 8, \
 	parameter SVO_BITS_PER_ALPHA = 0
 
+// XY bits width macro - used in array declarations
+// Set to 11 for high-res modes, 10 for standard modes
+`define SVO_XYBITS 11
+
 // Declaration macro - defines timing parameters based on SVO_MODE
 `define SVO_DECLS \
 	localparam SVO_HOR_PIXELS = \
@@ -86,8 +90,7 @@
 		(SVO_MODE == "1280x720")  ? 20 : \
 		(SVO_MODE == "1920x1080") ? 36 : 33; \
 	localparam SVO_HOR_TOTAL = SVO_HOR_PIXELS + SVO_HOR_FRONT_PORCH + SVO_HOR_SYNC + SVO_HOR_BACK_PORCH; \
-	localparam SVO_VER_TOTAL = SVO_VER_PIXELS + SVO_VER_FRONT_PORCH + SVO_VER_SYNC + SVO_VER_BACK_PORCH; \
-	localparam SVO_XYBITS = (SVO_HOR_PIXELS > 1024 || SVO_VER_PIXELS > 768) ? 11 : 10;
+	localparam SVO_VER_TOTAL = SVO_VER_PIXELS + SVO_VER_FRONT_PORCH + SVO_VER_SYNC + SVO_VER_BACK_PORCH;
 
 // Video mode definitions
 `ifdef MODE_640_480_60
