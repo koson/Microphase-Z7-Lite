@@ -1,19 +1,212 @@
-# Vivado Project Generated Files
-*.cache/
-*.hw/
-*.ip_user_files/
-*.sim/
-*.runs/
+#########################################################
+# Vivado Project Files
+#########################################################
 
-# Vivado Generated Files in source directories
-*.srcs/**/sim/
-*.srcs/**/synth/
-*.srcs/**/*.bd
-*.srcs/**/*.bxml
-*.srcs/**/hw_handoff/
+# NOTE: Keep .xpr project files - they are essential source files
+# Only ignore Vivado build/cache artifacts
 
-# Simulation compile libraries
+# Vivado generated folders (use ** for all subdirectories)
+**/.Xil/
+**/.jobs/
+**/.cache/
+**/*.cache/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+**/*.gen/
+
+# Block Design generated files
+**/*.srcs/sources_1/ip/*/
+**/*.srcs/sources_1/bd/*/hdl/
+**/*.srcs/sources_1/bd/*/*.bd
+**/*.srcs/sources_1/bd/*/*.bxml
+**/*.srcs/sources_1/bd/*/sim/
+**/*.srcs/sources_1/bd/*/synth/
+**/*.srcs/sources_1/bd/*/hw_handoff/
+**/*.ip_user_files/bd/*/sim/
+
+# Keep only source files in .srcs
+*.srcs/sources_1/new/*.bit
+*.srcs/sources_1/new/*.ltx
+*.srcs/sources_1/new/*.mmi
+*.srcs/sources_1/new/*.dcp
+*.srcs/constrs_1/imports/*.bit
+*.srcs/constrs_1/imports/*.ltx
+
+# Vivado temporary files
+**/*.jou
+**/*.log
+**/*.backup.*
+**/*.debug
+**/*.xml~
+**/*.pb
+**/*.dmp
+**/*.wdb
+**/*.wcfg
+**/*.xpe
+**/dfx_runtime.txt
+**/vivado_pid*.str
+**/vivado_pid*.debug
+**/xelab.pb
+**/xsim.ini
+**/xvhdl.pb
+**/xvlog.pb
 **/compile_simlib/
+**/*.tcl
+!**/tcl_script/**
+!**/scripts/**
+**/*.vds
+**/gen_run.xml
+**/vrs_config*.xml
 
-# Long filename issues on Windows
-**/.cxl.*
+# Implementation results
+**/*.bit
+**/*.bin
+**/*.ltx
+**/*.mmi
+**/*.sysdef
+**/*.hdf
+**/*.hwh
+**/*.xsa
+**/*.mcs
+**/*.prm
+**/impl_1/
+
+# Simulation files
+*.vcd
+*.saif
+*.wcfg
+*.wdb
+xsim.dir/
+xelab.pb
+xvlog.pb
+xvhdl.pb
+
+# Reports (keep only if needed for documentation)
+**/*.rpt
+**/*.rpx
+**/*.csv
+**/*.txt
+!**/README.txt
+!**/README.md
+
+# Intermediate synthesis files
+**/*.dcp
+**/*.ngc
+**/*.edf
+**/*.edif
+**/*.blif
+**/*.sdf
+
+# Checkpoint files
+*.checkpoint/
+
+# IP temporary files
+managed_ip_project/
+ip_repo/
+
+# SDK/Vitis workspace
+.metadata/
+*.sdk/
+RemoteSystemsTempFiles/
+
+#########################################################
+# Operating System Files
+#########################################################
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+#########################################################
+# IDE and Editor Files
+#########################################################
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+#########################################################
+# Version Control
+#########################################################
+
+# Git
+*.orig
+*.rej
+
+#########################################################
+# Keep These Files
+#########################################################
+
+# Source files to keep
+!*.vhd
+!*.v
+!*.sv
+!*.vhdl
+!*.vh
+!*.xdc
+!*.tcl
+!*.xci
+!*.bd
+!*.xpr
+!*.ps1
+!*.bat
+!*.sh
+!*.md
+
+# Project files to keep
+!*.xpr
+
+# Constraint files to keep (in new/ or imports/)
+!*.srcs/constrs_1/new/*.xdc
+!*.srcs/constrs_1/imports/*.xdc
+
+# HDL source files to keep
+!*.srcs/sources_1/new/*.vhd
+!*.srcs/sources_1/new/*.v
+!*.srcs/sources_1/new/*.sv
+!*.srcs/sources_1/new/*.vh
+!*.srcs/sources_1/imports/*.vhd
+!*.srcs/sources_1/imports/*.v
+
+# TCL scripts
+!tcl_script/
+!scripts/
+
+# Documentation
+!Docs/
+!*.pdf
+!*.docx
+!*.xlsx
+
+# Board files
+!Board/
+!*.xml
+*.vds
+*.jou
+*.pb
