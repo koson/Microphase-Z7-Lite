@@ -1,0 +1,19 @@
+# Vivado Project Generated Files
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+
+# Vivado Generated Files in source directories
+*.srcs/**/sim/
+*.srcs/**/synth/
+*.srcs/**/*.bd
+*.srcs/**/*.bxml
+*.srcs/**/hw_handoff/
+
+# Simulation compile libraries
+**/compile_simlib/
+
+# Long filename issues on Windows
+**/.cxl.*
