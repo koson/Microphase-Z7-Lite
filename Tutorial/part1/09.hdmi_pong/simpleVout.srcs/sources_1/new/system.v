@@ -20,9 +20,9 @@
 `timescale 1ns / 1ps
 `include "svo_defines.vh"
 
-// `define MODE_640_480_60
+`define MODE_640_480_60
 // `define MODE_800_480_75
-`define MODE_800_600_60
+// `define MODE_800_600_60
 //`define MODE_1024_768_60
 //`define MODE_1920_1080_60
 `define SINGLE_ENDED_LDI

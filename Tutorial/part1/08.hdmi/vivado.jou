@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Dec 18 10:17:16 2025
+# Process ID         : 57756
+# Current directory  : D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/08.hdmi
+# Command line       : vivado.exe -mode batch -source rebuild.tcl
+# Log file           : D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/08.hdmi/vivado.log
+# Journal file       : D:/GitHubRepos/__AES/__Electronics_Project/Component_Tester_V2026/Ref_Repos/Microphase-Z7-Lite/Tutorial/part1/08.hdmi\vivado.jou
+# Running On         : Koson-i9
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i9-14900KF
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 68498 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 72793 MB
+# Available Virtual  : 27620 MB
+#-----------------------------------------------------------
